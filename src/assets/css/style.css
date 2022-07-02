@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "ethnocentric";
+  src: url("../../public/fonts/ethnocentric.otf");
+}
+
+.list-text {
+  @apply text-lg
+    font-bold
+    lg:hover:animate-pulse
+    lg:hover:text-primary
+    lg:hover:transition
+    lg:hover:duration-500
+    lg:hover:ease-in-out
+    lg:dark:text-white
+    dark:lg:hover:animate-pulse
+    dark:lg:hover:text-primary
+    dark:lg:hover:transition
+    dark:lg:hover:duration-500
+  dark:lg:hover:ease-in-out;
+}
+
+.width-link {
+  @apply w-[340px];
+}
+
+.hamburger-line {
+  @apply z-50 my-2 block h-[2px] w-[30px] bg-secondary dark:bg-white;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-[34deg] scale-x-[1.2] bg-dark;
+}
+
+.hamburger-active > span:nth-child(2) {
+  @apply -rotate-[33deg] scale-x-[1.2] bg-dark;
+}
+
+.nav-active {
+  @apply -right-full left-0 translate-x-0;
+}
+
+nav ul li a {
+  @apply py-2 text-base text-dark group-hover:text-primary lg:p-3;
+}
+
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-3;
+}
+
+.navbar-fixed {
+  @apply fixed bg-white transition duration-500 dark:bg-dark;
+}
