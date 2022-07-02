@@ -36,11 +36,8 @@ darkToggle.addEventListener('click', () => {
     }
 })
 
-localStorage.theme === 'dark' || (!('theme' in localStorage)
-    && window.matchMedia('(prefers-color-scheme:dark)').matches) ?
-    darkToggle.checked = true : darkToggle.checked = false
-
-
-localStorage.theme === 'dark' || (!('theme' in localStorage)
-    && window.matchMedia('(prefers-color-scheme:dark)').matches) ?
-    document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark')
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    darkToggle.checked = true;
+} else {
+    darkToggle.checked = false;
+}
